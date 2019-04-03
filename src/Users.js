@@ -23,7 +23,7 @@ class Users extends Component {
         <div className="users-block">
         {this.props.users.map(user => (
             <form key={user.id}>
-              <ul className="square-box" style={styles}>
+              <ul className="square-box">
                 <li>name: {user.name}</li>
                 <li>username: {user.username}</li>
                 <li>email: {user.email}</li>
