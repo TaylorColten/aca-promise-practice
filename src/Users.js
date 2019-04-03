@@ -1,7 +1,12 @@
 import React, { Component, Fragment } from 'react'
 import { Button } from '@material-ui/core'
 
+
+
 class Users extends Component {
+  getUsers = () =>{
+    fetch("https://jsonplaceholder.typicode.com/users")
+  }
   render() {
     return (
       <Fragment>
