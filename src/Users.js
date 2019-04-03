@@ -1,12 +1,18 @@
 import React, { Component, Fragment } from 'react'
 import { Button } from '@material-ui/core'
-
+import {connect} from "react-redux";
 
 
 class Users extends Component {
   getUsers = () =>{
     fetch("https://jsonplaceholder.typicode.com/users")
-  }
+    .then(results => results.json())
+      .then(data => {
+        console.log(data);
+        this.props.setUsers(data);
+      });
+  };
+  
   render() {
     return (
       <Fragment>
